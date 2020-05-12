@@ -15,6 +15,10 @@ from mfec.agent import MFECAgent
 from mfec.utils import Utils
 
 parser = argparse.ArgumentParser()
+parser.add_argument('-k', type=int, default=9,
+                    help="Number of nearest neighbors taken into account (default: 9)")
+parser.add_argument('--dim', type=int, default=32,
+                    help="Number of random features extracted by the OPU (default: 32)")
 parser.add_argument('--discount', type=float, default=0.99,
                     help="Discount rate for the return (default: 0.99)")
 parser.add_argument('--epsilon', type=float, default=0.001,
@@ -35,7 +39,8 @@ EPOCHS = 4
 FRAMES_PER_EPOCH = 100000
 
 ACTION_BUFFER_SIZE = 200000  # Number of states that can be stored for each action
-K = 9  # Number of nearest neighbors taken into account
+K = args.k
+
 DISCOUNT = args.discount
 EPSILON = args.epsilon
 
@@ -43,7 +48,7 @@ FRAMESKIP = 3  # Default gym-setting is (2, 5), see notes in the README
 REPEAT_ACTION_PROB = 0.0  # Default gym-setting is .25
 
 SCALE_DIMS = None  #(58, 40)  # Dimensions to rescale the inputs to, None means no rescaling
-STATE_DIMENSION = 32  # Number of random features extracted by the OPU
+STATE_DIMENSION = args.dim
 
 
 def main():
