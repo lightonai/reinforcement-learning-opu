@@ -22,10 +22,8 @@ class MFECAgent:
         epsilon,
         resize,
         state_dimension,
-        actions,  # Available actions
-        add_pos  # For MsPacman: adds MsPacman's position to the state
+        actions  # Available actions
     ):
-        self.add_pos = add_pos
         self.rs = np.random.RandomState(None)
         self.size = resize
         self.memory = []  # To store useful data during an episode

@@ -73,8 +73,7 @@ def main():
             EPSILON,
             SCALE_DIMS,
             STATE_DIMENSION,
-            range(env.action_space.n),
-            add_pos=False
+            range(env.action_space.n)
         )
 
         run_algorithm(agent, env, utils)
