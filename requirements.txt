@@ -1,0 +1,9 @@
+atari-py
+gym
+lightonml
+lightonopu
+matplotlib
+numpy
+Pillow
+scikit-learn
+ffmpeg
