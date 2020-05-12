@@ -1,5 +1,5 @@
 """
-From https://github.com/astier/model-free-episodic-control MIT-Licensed
+Fork of https://github.com/astier/model-free-episodic-control (MIT-Licensed)
 """
 
 import random
