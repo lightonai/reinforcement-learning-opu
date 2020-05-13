@@ -18,8 +18,6 @@ This creates a video file `bestrun.mp4` of the best recorded run.
 
 To see available commands, use `python main.py --help`.
 
-To replicate figure 1, install the Python package `mpl_toolkits` and execute `johnson_lindenstrauss.py`.
-
 ## <img src="_static/lighton_cloud_small.png" width=120/> Access to Optical Processing Units
 
 
