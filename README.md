@@ -1,19 +1,24 @@
-# <img src="_static/lighton_small.png" width=60/>Title
+# <img src="_static/lighton_small.png" width=60/>Model-Free Episodic Control with Optical Random Features
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  [![Twitter](https://img.shields.io/twitter/follow/LightOnIO?style=social)](https://twitter.com/LightOnIO)
 
-Descriptive Text - with hyperlink to the relevant paper/blog post
-
-**Remember to fill in the Description, Website and Topics of the repository.**
+This is the code to reproduce the video of the [Reinforcement Learning with the OPU](https://medium.com/@LightOnIO) blog post on Medium.
 
 ## Requirements
 
-- Enter a list of requirements in the code environment, or point to the `requirements.txt` file
-- Give instructions on how to fetch the dataset, if needed
+Please install required Python packages with `pip install -r requirements.txt`.
 
 ## Reproducing our results
 
-- Give detailed instructions on how to run the code in order to replicate the results
+To run the script with the Atari 2600 version of the MsPacman game, execute in the shell: 
+```sh
+python main.py --env="MsPacman-v0"
+```
+This creates a video file `bestrun.mp4` of the best recorded run.
+
+To see available commands, use `python main.py --help`.
+
+To replicate figure 1, install the Python package `mpl_toolkits` and execute `johnson_lindenstrauss.py`.
 
 ## <img src="_static/lighton_cloud_small.png" width=120/> Access to Optical Processing Units
 
@@ -23,10 +28,3 @@ To request access to LightOn Cloud and try our photonic co-processor, please vis
 
 For researchers, we also have a LightOn Cloud for Research program, please visit https://cloud.lighton.ai/lighton-research/ for more information.
 
-## Citation \[ OPTIONAL \]
-
-If you found this implementation useful in your research, please consider citing:
-<Bibtex for citation>
-
-## Hardware specs \[ OPTIONAL \]
-Give details on the hardware used. This is mandatory only if there are timing benchmarks in the repository.
