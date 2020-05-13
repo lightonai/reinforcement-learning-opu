@@ -15,7 +15,7 @@ from mfec.agent import MFECAgent
 from mfec.utils import Utils
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-k', type=int, default=9,
+parser.add_argument('--knn', type=int, default=9,
                     help="Number of nearest neighbors taken into account (default: 9)")
 parser.add_argument('--dim', type=int, default=32,
                     help="Number of random features extracted by the OPU (default: 32)")
