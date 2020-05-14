@@ -1,8 +1,8 @@
-# <img src="_static/lighton_small.png" width=60/>Model-Free Episodic Control with Optical Random Features
+# <img align="right" src="_static/lighton_small.png" width=60/>Model-Free Episodic Control with Optical Random Features
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  [![Twitter](https://img.shields.io/twitter/follow/LightOnIO?style=social)](https://twitter.com/LightOnIO)
 
-This is the code to reproduce the video of the [Reinforcement Learning with the OPU](https://medium.com/@LightOnIO) blog post on Medium.
+This is the code to reproduce the video of the [**Tackling Reinforcement Learning with the Aurora OPU**](https://medium.com/@LightOnIO/88f3ffff137a) blog post on Medium.
 
 ## Requirements
 
