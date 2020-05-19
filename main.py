@@ -92,7 +92,6 @@ def main():
 
         if RENDER:  # Creates the video of the best recorded run
             # https://askubuntu.com/questions/610903/how-can-i-create-a-video-file-from-a-set-of-jpg-images
-            os.system('cd ~/q-learning/')  # careful
             if bestrun[2] > exploit_score:
                 os.system(
                     'ffmpeg -framerate 25 -i videos/{}-{}-%00000d.png -c:v libx264 -profile:v high -crf 20 -pix_fmt yuv420p bestrun.mp4'.format(
@@ -203,7 +202,7 @@ def exploit(agent, env):
 
         episode_reward += reward
 
-    print('\nExploitation run: score', episode_reward)
+    print('\nExploitation run: score', episode_reward, '\n')
     return episode_reward
 
 
