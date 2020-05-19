@@ -39,7 +39,7 @@ EPOCHS = 4
 FRAMES_PER_EPOCH = 100000
 
 ACTION_BUFFER_SIZE = 200000  # Number of states that can be stored for each action
-K = args.k
+K = args.knn
 
 DISCOUNT = args.discount
 EPSILON = args.epsilon
