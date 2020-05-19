@@ -1,14 +1,5 @@
-#!/usr/bin/env python3
-
-import os.path
-
-
 class Utils:
     def __init__(self, frames_per_epoch, max_frames):
-        # self.results_file = open(os.path.join(results_dir, "results.csv"), "w")
-        # self.results_file.write(
-        #     "epoch, episodes, frames, reward_sum, reward_avg, reward_max\n"
-        # )
         self.frames_per_epoch = frames_per_epoch
         self.max_frames = max_frames
         self.total_frames = 0
@@ -19,7 +10,6 @@ class Utils:
         self.epoch_reward_max = 0
 
     def end_episode(self, episode_frames, episode_reward):
-        """Should be always and only executed at the end of an episode."""
         self.epoch_episodes += 1
         self.epoch_frames += episode_frames
         self.epoch_reward_sum += episode_reward
@@ -28,8 +18,7 @@ class Utils:
             self.epoch_reward_max = episode_reward
         self.total_frames += episode_frames
 
-        # message = "Epoch: {}\tEpisode: {}\tReward: {}\tEpoch-Frames: {}/{}"
-        message = "Epoch: {}\tEpisode: {}\tAverage reward: {}\tMax epoch frames: {}/{}"
+        message = "Epoch: {}\tEpisode: {}\tReward: {}\tEpoch frames: {}/{}"
         results = [
             self.epoch,
             self.epoch_episodes,
@@ -40,7 +29,6 @@ class Utils:
         print(message.format(*results))
 
     def end_epoch(self):
-        """Save the results for the given epoch in the results-file"""
         results = [
             self.epoch,
             self.epoch_episodes,
